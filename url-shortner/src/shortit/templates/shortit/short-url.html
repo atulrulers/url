@@ -1,0 +1,16 @@
+{% extends 'shortit/index.html' %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% block css %} 
+	<link rel="stylesheet" type="text/css" href="{% static 'shortit/index.css' %}">
+    <link rel="stylesheet" href="{% static 'shortit/short-url.css' %}">
+{% endblock %}
+
+{% block shorturl %}
+	
+	<div class="form-group input-group input-group-lg" id="long-url">
+		<input type="text" class="form-control" value="http://127.0.0.1:8080/{{shrinked_url.shortcode}}" id="shorted_url">
+		<span class="input-group-btn"> <input type="button" class="btn btn-default" value="Copy" id="copy"> </span>
+	</div>
+
+{% endblock %}

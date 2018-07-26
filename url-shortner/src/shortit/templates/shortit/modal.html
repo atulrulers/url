@@ -1,0 +1,34 @@
+
+
+
+<div id="myModal" class="modal fade" role="dialog">
+	<div class="modal-dialog modal-lg modal-sm">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" style="color: #772523;">&times;</button>
+				<h4 class="modal-title text-center text-info">Check number of people visited your shortlink.</h4>
+			</div>
+
+			<div class="modal-body">
+				<div class="form-group input-group input-group-lg" id="click_count">
+					{% csrf_token %}
+					<input type="url" class="form-control" value="" id="short_url" placeholder="Enter short url here...">
+					<span class="input-group-btn"> <input type="button" class="btn btn-default" value="Check" id="count_click"> </span>
+				</div>
+
+				<div class="container-fluid text-center result">
+					<strong style="font-size: 16px;" id="counter" class="text-center text-success"></strong>
+					<strong style="font-size: 16px;" id="counter1" class="text-center text-danger"></strong>
+				</div>
+
+			</div>
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-lg btn-danger" data-dismiss="modal" style="margin-right: 45%;"> Dismiss </button>
+			</div>
+
+		</div>
+	</div>
+</div>
+

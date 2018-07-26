@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="url.css" rel="stylesheet"> 
+    </head>
+    <body style="margin:0">
+    <div class="container-fluid url-header">
+        <div class="row">
+        <div class="col-xs-12 text-head">URL SHORTNER
+            </div>
+        </div>
+        </div>
+        <div class="container-fluid">
+         <form id="form1" action="Short" method="post">
+            <div class="input-group url-group">
+            <input type="text" placeholder="Enter Your URL Here...!!!" name="longURL" class="form-control input-lg url-enter">
+                <div class="input-group-btn">
+                  <button type="submit" class="btn btn-default btn-lg arrow-btn" id="go" onclick="final()"><i class="glyphicon glyphicon-arrow-right"></i></button>
+                    </div>
+            </div>
+            </form>
+            <form id="form2" action="Short" method="post">
+            <div class="input-group option-group">
+                <span class="input-group-addon link-option">http://ocul.in/</span>
+                <input type="text" placeholder="optional.." name="" class="form-control input-lg option-enter">
+                <div class="input-group-btn">
+                  <button type="submit" class="btn btn-default btn-lg arrow-btn" id="optional" onclick="bringBack()"><i class="glyphicon glyphicon-arrow-right"></i></button>
+                    </div>
+                </div>
+            </form>
+            <div class="container-fluid avail-group" id="copy-open">
+                <span class="text" id="avail">Available</span>
+                <form>
+                <div class="input-group two-btn">
+                    <div class="input-group-btn">
+                  <button type="submit" class="btn btn-default btn-lg copy-btn" id="copy1"><i class="glyphicon glyphicon-copy"></i></button>
+                        <button type="submit" class="btn btn-default btn-lg open-btn" id="open1"><i class="glyphicon glyphicon-share"></i></button>
+                    </div>
+                </div>
+                </form>
+            </div>
+            <form id="finalLink">
+            <div class="input-group shorten-url">
+                <span class="input-group-addon short-url" id="shortUrl"></span>
+                <div class="input-group-btn">
+                     <button type="submit" class="btn btn-default btn-lg arrow-btn copy-short-btn"><i class="glyphicon glyphicon-copy"></i></button>
+                     <button type="submit" class="btn btn-default btn-lg arrow-btn"><i class="glyphicon glyphicon-share"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="container-fluid url-footer">
+            <div class="row div1-foot">
+            <div class="col-xs-12 text-center text-foot">BackEnd Development- AAYUSH
+            </div>
+            </div>
+            <div class="row div2-foot">
+            <div class="col-xs-12 text-center text-foot">FrontEnd Development- AARUSHI</div>
+            </div> 
+        </div>
+        <script src="url.js"></script>
+    </body>
+</html>

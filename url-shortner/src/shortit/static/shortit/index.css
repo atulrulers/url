@@ -1,0 +1,79 @@
+#url-intro {
+	padding: 4%;
+}
+
+#intro{
+	padding: 1%;
+	font-family: 'Kalam', cursive;
+	font-size: 5rem;
+	color: #004B8D !important;
+}
+
+#long-url , #optional-url, #long-url {
+	padding: 3%;
+}
+
+.input-group-lg>.form-control, 
+.input-group-lg>.input-group-addon, 
+.input-group-lg>.input-group-btn>.btn {
+	height: 55px !important;
+}
+
+#empty{
+	padding: 4%;
+}
+
+.input-lg{
+	height: 58px !important;
+}
+
+
+/* To see number of click and other related info */
+/* cc = check counter */
+
+#cc>.btn-lg {
+	position: fixed;
+    height: 55px;
+    right: 0;
+    top: 50%;
+}
+
+/* no of url shorted till now */
+#count {
+	position: fixed;
+	/*height: 55px;*/
+	left: 0;
+	top: 50%;
+	padding: 20px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.test + .tooltip > .tooltip-inner { 
+	background-color: white;
+    color: #292F33;
+    border: 1px solid #292f33;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Tooltip on top */
+.test + .tooltip.top > .tooltip-arrow {
+    border-top: 2px solid #292f33;
+}
+
+
+@media screen and (max-width: 768px) {
+    #count, #cc>.btn-lg{
+        top : auto;
+    }
+}
+
+
+
+
+
+
+
+
+

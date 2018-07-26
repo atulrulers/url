@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link   rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	    <!-- Google fonts -->
+	    <link href="https://fonts.googleapis.com/css?family=Lobster+Two:400,700i|Merienda:400,700|Over+the+Rainbow|Kalam" rel="stylesheet">
+	    <!-- fa fa-icon -->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <link rel="shortcut icon" type="image/png" href="https://s3.ap-south-1.amazonaws.com/programmersboat/favicon-1024+(1).png"/>
+	    <title> pboat | {% block title %} URL shortener {% endblock %} </title>
+	    {% load staticfiles %}
+
+		<style type="text/css">
+			font-family: 'Merienda', cursive;
+			font-family: 'Lobster Two', cursive;
+			font-family: 'Over the Rainbow', cursive;
+		</style>
+    	<link rel="stylesheet" href="{% static 'shortit/base.css' %}">
+    	{% block css %} {% endblock %}
+	</head>
+	<body>
+
+	<!-- -->
+	<div class="container-fluid" id="nav">
+		<div class="row">
+			<div class="col-sm-12">
+				<p class="text-center"><a href="{% url 'create_form' %}" id="brand-name" title="An url shortener."> Pboat </a></p>
+			</div>
+		</div>
+	</div>
+
+{% block body %}
+
+{% endblock %}
+
+
+
+	 <section class="" id="footer">
+		<div class="container-fluid" id="footer-container">
+			<div class="row">
+				<div class="col-sm-12 text-center" id="foot-social">
+					<ul class="social-network social-circle">
+                        <li><a href="#" class="icoGithub" title="Github"><i class="fa fa-github"></i></a></li>
+                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="icoGoogle" title="mailto:atulrulers@gmail.com"><i class="fa fa-google"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+				</div>
+			</div>	
+
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
+					<p class="text-muted" id="powered">Pboat is powered by Programmers Boat.</p>
+					<p id="copyright">
+						<i class="fa fa-copyright" aria-hidden="true"></i>
+						{% now "Y" as current_year %} {{current_year}} All right Reversed.
+						<a class="ml-2" href="https://www.programmersboat.com" target="_blank" id="programmersboat">Programmers Boat</a>
+					</p>
+					<p>
+						<span class="text-center"><a href="{% url 'terms_of_use' %}" target="_blank" id="programmersboat">Terms of use</a></span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<!-- bootstrap -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="
+		sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		{% block js %}
+		{% endblock %}
+	</body>
+</html>

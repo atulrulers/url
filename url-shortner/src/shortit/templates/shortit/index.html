@@ -1,0 +1,55 @@
+{% extends 'shortit/base.html' %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% block css %} 
+    <link rel="stylesheet" href="{% static 'shortit/index.css' %}">
+    <link rel="stylesheet" href="{% static 'shortit/modal.css' %}">
+{% endblock %}
+
+{% block body %} 
+
+	<form method="POST" enctype='multipart/form-data' class="form-horizontal" action="{% url 'create_form' %}"> {% csrf_token %}
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-offset-3 col-sm-6">
+
+					<div class="form-group input-group input-group-lg" id="long-url">
+						{{ form.url | add_class:"form-control" | attr:"placeholder:Put your bulky url..." }}
+						<span class="input-group-btn"> <input type="submit" class="btn btn-default" value="Shrink" id="shrink"> </span>
+					</div>
+					<p class="text-danger"> {% if invalid_url %} Url is either not valid or remain empty. {% endif %} </p>
+
+					<div class="form-group input-group input-group-lg" id="optional-url">
+						<span class="input-group-addon text-primary"> https://pboat.in/ </span>
+						{{ form.shortcode | add_class:"form-control" | attr:"placeholder:custom url / optional " }}
+					</div>
+
+					<p id="is_available" class="text-danger"></p>
+
+					{% block shorturl %}
+					{% endblock %}
+
+				</div>
+
+				<div class="col-sm-1"  id="cc" >
+					<button type="button" class="btn btn-default btn-lg test" id="checkCount" data-toggle="modal" data-target="#myModal" title="Check no of click on your short link."> Check Count </button>
+				</div>
+
+				<div class="col-sm-2 text-center text-info">
+					<strong> <a href="javascript:void()" class="btn btn-default btn-lg text-center test" id="count" data-toggle="tooltip" data-placement="auto" title="total short url"> {{ count }} </a></strong>
+				</div>
+
+			</div>
+		</div>	
+	</form>
+	<div id="empty"></div>
+
+	{% include 'shortit/modal.html' %}
+
+{% endblock  %}
+
+{% block js %}
+	<script type="text/javascript" src="{% static 'shortit/is_available.js' %}"></script>
+	<script type="text/javascript" src="{% static 'shortit/copy_the_text.js' %}"></script>
+	<script type="text/javascript" src="{% static 'shortit/check_count.js' %}"></script>
+{% endblock %}
